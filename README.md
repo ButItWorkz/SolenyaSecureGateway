@@ -27,7 +27,7 @@ The framework operates on a decentralized, three-tier architecture:
 While the core philosophy of the Windows Client relies strictly on "Living off the Land" (LotL) and zero-dependency execution, specific architectural exceptions were made in the broader infrastructure to demonstrate practical utility and self-reliance.
 
 ### 1. The OOB Relay & The `signal-cli` Exception
-The integration of a Raspberry Pi running the third-party `signal-cli` technically violates a pure zero-dependency constraint. A true Advanced Persistent Threat (APT) would likely utilize steganography, botnet routing, or obfuscated public forums for C2 telemetry.
+The integration of a Raspberry Pi running the third-party `signal-cli` technically violates a pure zero-dependency constraint. A true OOB relay would emulate an Advanced Persistent Threat (APT) and likely utilize steganography, botnet routing, or obfuscated public forums for C2 style communication, evasion, and telemetry.
 
 * **The Rationale:** The primary goal of this project was to empower independent users with highly secure infrastructure, rather than executing a flawless adversary emulation. Utilizing Signal provides robust End-to-End (E2E) encryption and the high-utility convenience of receiving real-time SMS-style alerts when an ISP IP shift occurs.
 * **Alternative Implementations:** This modular architecture allows the `signal-cli` node to be easily swapped for other native transmission methods, such as an automated script pushing to an encrypted ProtonMail inbox or a secure internal forum bot.
